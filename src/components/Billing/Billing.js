@@ -42,11 +42,11 @@ const Billing = () => {
                                 
                                 <Stack w="full" spacing="8">
                                     <VStack align="baseline">
-                                        <Text fontWeight="700" fontSize="14px" color="#000000">Name on Card <span style={{color: "red"}}>*</span></Text>
+                                        <Text fontWeight="700" fontSize={["12px","14px"]} color="#000000">Name on Card <span style={{color: "red"}}>*</span></Text>
                                         <Input 
                                          name="name" type="text"
                                           placeholder="Opara Linus Ahmed" 
-                                          fontSize="14px" color="#4F4F4F" 
+                                          fontSize={["12px","14px"]} color="#4F4F4F" 
                                           bg="#ffffff"
                                           id="name"
                                           {...formik.getFieldProps('name')}
@@ -70,14 +70,14 @@ const Billing = () => {
                                             <Text fontWeight="500" fontSize="10px" color="red">{formik.errors.type}</Text>
                                         ) : null}
                                     </VStack>
-                                    <Flex w="100%" justifyContent="space-between">
-                                        <VStack align="baseline" w="40%">
-                                            <Text fontWeight="700" fontSize="14px" color="#000000">Card details <span style={{color: "red"}}>*</span></Text>
+                                    <Flex w="100%" justifyContent="space-between" flexDir={["column", "row"]}>
+                                        <VStack align="baseline" w={["100%","40%"]}>
+                                            <Text fontWeight="700" fontSize={["12px","14px"]} color="#000000">Card details <span style={{color: "red"}}>*</span></Text>
                                             <Input 
                                             name="card_details" 
                                             type="number" 
                                             placeholder="44960 44960 4496 44980" 
-                                            fontSize="14px" color="#4F4F4F" 
+                                            fontSize={["12px","14px"]} color="#4F4F4F" 
                                             bg="#ffffff"
                                             id="card_details"
                                             {...formik.getFieldProps('card_details')}
@@ -86,12 +86,12 @@ const Billing = () => {
                                             <Text fontWeight="500" fontSize="10px" color="red">{formik.errors.card_details}</Text>
                                         ) : null}
                                         </VStack>
-                                        <VStack align="baseline" w="20%">
-                                            <Text fontWeight="700" fontSize="14px" color="#000000">Expiry Date <span style={{color: "red"}}>*</span></Text>
+                                        <VStack m={["30px 0", 0]} align="baseline" w={['100%',"20%"]}>
+                                            <Text fontWeight="700" fontSize={["12px","14px"]} color="#000000">Expiry Date <span style={{color: "red"}}>*</span></Text>
                                             <Input 
                                             name="date" 
                                             type="number" placeholder="04 / 23"
-                                            fontSize="14px" 
+                                            fontSize={["12px","14px"]}
                                             color="#4F4F4F"
                                             bg="#ffffff" 
                                             id="date"
@@ -101,13 +101,13 @@ const Billing = () => {
                                             <Text fontWeight="500" fontSize="10px" color="red">{formik.errors.date}</Text>
                                         ) : null}
                                         </VStack>
-                                        <VStack align="baseline" w="20%">
-                                            <Text fontWeight="700" fontSize="14px" color="#000000">CVV <span style={{color: "red"}}>*</span></Text>
+                                        <VStack align="baseline" w={['100%',"20%"]}>
+                                            <Text fontWeight="700" fontSize={["12px","14px"]} color="#000000">CVV <span style={{color: "red"}}>*</span></Text>
                                             <Input 
                                             name="code" 
                                             type="number" 
                                             placeholder="223" 
-                                            fontSize="14px" 
+                                            fontSize={["12px","14px"]}
                                             color="#4F4F4F" 
                                             bg="#ffffff" 
                                             id="code"
@@ -118,10 +118,10 @@ const Billing = () => {
                                         ) : null}
                                         </VStack>
                                     </Flex>
-                                    <Flex alignItems="center">
+                                    <Flex alignItems="center" flexDir={["column","row"]}>
                                         <Button type='submit' 
                                          _hover={{bg:"none", border:"1px solid #F2C94C", color:"#F2994A"}} p="20px 70px" color="white" bgImage="linear-gradient(to right, #F2C94C, #F2994A)">Next</Button>
-                                        <Box p="30px"><Text color="#4E598C">Cancel Payment</Text></Box>
+                                        <Box cursor="pointer" p="30px"><Text color="#4E598C">Cancel Payment</Text></Box>
                                     </Flex>
                                 </Stack>
 
