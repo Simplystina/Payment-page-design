@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react'
-import {Box, Text, Flex, Center, VStack, FormLabel, Input, Stack, Select, Button, position, background} from "@chakra-ui/react"
-import bgImage from '../../assests/bg.png'
+import React from 'react'
+import {Box, Text, Flex} from "@chakra-ui/react"
+
 import './Home.css'
-import { Form, Formik } from "formik";
-import * as Yup from "yup";
 import { NavLink, Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
@@ -12,10 +10,7 @@ const Home = () => {
 
     const {pathname}= useLocation()
     
-     useEffect(()=>{
-      console.log(pathname, "location")
-     })
-    
+     
 
   return (
     <Flex className='container' justifyContent="center" >
